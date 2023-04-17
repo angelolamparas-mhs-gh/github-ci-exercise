@@ -3,11 +3,17 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Github CI Exercise Site`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Github CI Exercise Site",
   },
   plugins: [
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      }
+    },
   ],
 }
